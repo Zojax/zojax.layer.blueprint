@@ -1,0 +1,27 @@
+<configure
+ xmlns="http://namespaces.zope.org/zope"
+ xmlns:zojax="http://namespaces.zope.org/zojax"
+ i18n_domain="zojax.layer.blueprint">
+
+  <!-- css resources -->
+  <zojax:resourcedirectory
+     name="blueprint"
+     directory="resources"
+     mapping=".css:zrt" 
+     layer=".interfaces.IBlueprintLayer" />
+
+  <zojax:resourcepackage
+     type="stylesheet"
+     name="blueprint.css"
+     title="Blueprint CSS"
+     cache="dynamic"
+     library="blueprint"
+     order="1"
+     layer=".interfaces.IBlueprintLayer">
+
+    <resource path="blueprint/screen.css" media="screen" />
+    <resource path="blueprint/print.css" media="print" />
+    
+  </zojax:resourcepackage>
+
+</configure>
